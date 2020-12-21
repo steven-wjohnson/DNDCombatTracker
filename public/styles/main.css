@@ -1,0 +1,138 @@
+body {
+    background-image: url("/images/woodBack2.jpg");
+    margin-top: 1em;
+}
+
+tbody{
+    background-color: beige;
+}
+
+nav {
+    margin-bottom: 1em;
+}
+
+/* input {
+    text-align: center;
+} */
+
+
+
+/* ID Styles */
+
+#headerTitle {
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafaff;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#landingBtns {
+    margin-top: 2em;
+}
+
+#backBtn {
+    text-align: center;
+}
+
+#btnAddNewPlayer{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 0 0.4px 0.75px 1.5px #272727;
+}
+
+#btnUpdatePlayer{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 0 0.4px 0.75px 1.5px #272727;
+}
+
+#btnAddNewCharacter{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 0 0.4px 0.75px 1.5px #272727;
+}
+
+#newPlayerFormHeader{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    -webkit-text-fill-color: crimson;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#newCharacterFormHeader{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    -webkit-text-fill-color: crimson;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#navControlUL{
+    width: 100%;
+}
+
+/* Class Styles */
+
+.label{
+    width: 15%;
+    margin-right: 1em;
+    margin-left: 25%;
+    font-weight: bolder;
+}
+
+.encounterBtns {
+    width: 94%;
+    margin-left: 3%;
+    margin-bottom: .7em;
+    box-shadow: 0 0.4px 0.75px 1.5px #272727;
+}
+
+.landing {
+    width: 60%;
+    height: 450px;
+    margin-top: 10em;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 1em;
+    background-color: #3d5170;
+    border-radius: 25px;
+    box-shadow: 0 5px 12px 10px;  
+}
+
+.formContainer {
+    width: 60%;
+    margin-top: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 15%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: beige;
+    border-radius: 25px;
+    box-shadow: 0 5px 12px 10px;
+}
+
+.btnNav {
+    box-shadow: 0 0.4px 0.75px 1.5px #585858;
+    width: 100%;
+}
+
+.navControls {
+    margin-right: 0.25em;
+    width: 18%;
+}
+
+.inline-btn {
+    margin-right: 0.5em;
+}
+
+

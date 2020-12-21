@@ -1,0 +1,77 @@
+<%- include('partials/header') %>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-light bg-dark">
+                <ul class="nav justify-content-center" id="navControlUL">
+                    <li class="nav-item navControls">
+                        <form class="form-inline" action="/master/players/add" method="GET">
+                            <button type="submit" class="btn btn-info btnNav"><i class="fas fa-plus"></i> Create Player</button>
+                        </form>
+                    </li>
+                    <li class="nav-item navControls">
+                        <form class="form-inline" action="/master/characters/add" method="GET">
+                            <button type="submit" class="btn btn-info btnNav"><i class="fas fa-plus"></i> Create Character</button>
+                        </form>
+                    </li>
+                    <li class="nav-item navControls">
+                        <form action="/" method="GET">
+                            <div id="backBtn">
+                                <button type="submit" class="btn btn-primary btnNav">Back</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th></th>
+                        <th scope="col">Player</th>
+                        <th scope="col">Character</th>
+                        <th scope="col">AC</th>
+                        <th scope="col">Max HP</th>
+                        <th scope="col">HP</th>
+                        <th scope="col">Initiative Total</th>
+                        <th scope="col">Condition</th>
+                        <th scope="col">Combat Effects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <% players.forEach(element => { %>
+
+                    <tr>
+                        <td>
+                            <ul class="nav">
+                                <li class="inline-btn">
+                                    <form class="form-inline" action="/master/players/<%= element.id %>/update" method="GET">
+                                        <input type="hidden" name="playerId" value="<%= element.id %>">
+                                        <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form class="form-inline" action="/master/players/<%= element.id%>/delete" method="POST">
+                                        <input type="hidden" name="playerId" value="<%= element.id %>">
+                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </td>
+                        <td> <%= element.name %> </td>
+                        <td> <%= element.characterName %> </td>
+                        <td> <%= element.characterAC %> </td>
+                        <td> <%= element.characterMaxHP %> </td>
+                        <td> <%= element.characterHP %> </td>
+                        <td> <%= element.initiative %> </td>
+                        <td> <%= element.condition %> </td>
+                        <td> <%= element.combatEffects %> </td>
+                    </tr>
+
+                    <% }); %>
+
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

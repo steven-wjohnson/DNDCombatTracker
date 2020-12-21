@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+    <body>
+        <div class="container">
+
+            <div class="formContainer">
+                <h1 id="newPlayerFormHeader">New Player</h1>
+                <form action="/master/players/add" method="POST">
+                    <div class="form-group">
+                        <label class="label" for="playerName">Player Name</label>
+                        <input type="text" name="playerName" placeholder="Enter player name">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="characterSelector">Character</label>
+                        <select name="characterSelector" id="characters">
+                            <% characters.forEach(element => { %>
+                                <option value="<%= element.id %>"><%= element.name %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="playerInitiative">Initiative Total</label>
+                        <input type="number" name="playerInitiative" placeholder="Enter Initiative">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="playerCondition">Condition</label>
+                        <input type="text" name="playerCondition" placeholder="Enter player condition">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="playerCombatEffects">Combat Effects</label>
+                        <input type="text" name="playerCombatEffects" placeholder="Enter combat effects">
+                    </div>
+                    <button id="btnAddNewPlayer" class="btn btn-lg btn-primary" type="submit" name="btnAddPlayer">Add New Player</button>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

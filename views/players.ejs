@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+    <body>
+        <div class="container">
+            
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Player</th>
+                        <th scope="col">Character</th>
+                        <th scope="col">AC</th>
+                        <th scope="col">Max HP</th>
+                        <th scope="col">HP</th>
+                        <th scope="col">Initiative Total</th>
+                        <th scope="col">Condition</th>
+                        <th scope="col">Combat Effects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% players.forEach(element => { %>
+
+                        <tr>
+                            <td> <%= element.name%> </td>
+                            <td>Ellumyr</td>
+                            <td>12</td>
+                            <td>8</td>
+                            <td>8</td>
+                            <td> <%= element.initiative %> </td>
+                            <td> <%= element.condition %> </td>
+                            <td> <%= element.combatEffects %> </td>
+                        </tr>
+    
+                        <% }); %>
+                </tbody>
+            </table>
+            <form action="/" method="GET">
+                <div id="backBtn">
+                    <button type="submit" class="btn btn-primary btn-lg">Back</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

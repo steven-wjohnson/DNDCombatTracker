@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+    <body>
+        <div class="container">
+
+            <div class="formContainer">
+                <h1 id="newPlayerFormHeader">Update Player</h1>
+                <form action="/master/players/<%= player.id %>/update" method="POST">
+                    <div class="form-group">
+                        <label class="label" for="playerName">Player Name</label>
+                        <input type="text" name="playerName" value="<%= player.name %>">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="playerInitiative">Initiative Total</label>
+                        <input type="number" name="playerInitiative" value="<%= player.initiative %>">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="playerCondition">Condition</label>
+                        <input type="text" name="playerCondition" value="<%= player.condition %>">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="playerCombatEffects">Combat Effects</label>
+                        <input type="text" name="playerCombatEffects" value="<%= player.combatEffects %>">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="characterHP">Character HP</label>
+                        <input type="text" name="characterHP" value="<%= player.characterHP %>">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="characterId">Character ID</label>
+                        <input type="text" name="characterId" readonly value="<%= player.characterId %>">
+                    </div>
+                    <button id="btnUpdatePlayer" class="btn btn-lg btn-primary" type="submit" name="btnUpdatePlayer">Update Player</button>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
